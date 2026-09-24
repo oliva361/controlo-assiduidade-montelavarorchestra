@@ -15,60 +15,13 @@
         .presente { background-color: #d4edda; color: #155724; font-weight: bold; }
         .faltou { background-color: #f8d7da; color: #721c24; font-weight: bold; }
         .voltar { display: inline-block; margin-bottom: 15px; text-decoration: none; background: #3498db; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
-        .aviso { text-align: center; padding: 30px; color: #666; font-size: 16px; }
     </style>
 </head>
 <body>
     <h2>Mapa Geral de Assiduidade</h2>
     <a href="index.html" class="voltar">⬅ Voltar ao Formulário</a>
-    <div class="table-container" id="conteudoTabela">
-        <div class="aviso">A carregar dados atualizados...</div>
-    </div>
-
-    <script>
-        const musicosLista = ["Ivan", "Samuel", "Adelaide", "Rafael", "Joana", "Victor", "Sofia M.", "Alexandre", "Pedro B.", "Ricardo P.", "Kika", "Raul", "Ricardo S.", "Ana Sofia", "Simone", "Patrícia", "André", "Daniel", "Francisco"];
-
-        async function carregarTabela() {
-            try {
-                // Adiciona um parâmetro de tempo para evitar que o navegador guarde a tabela antiga em cache
-                const resposta = await fetch('registos.json?' + new Date().getTime());
-                if (!resposta.ok) throw new Error('Não foi possível carregar os registos.');
-                const listaRegistos = await resposta.json();
-
-                if (!listaRegistos || listaRegistos.length === 0) {
-                    document.getElementById('conteudoTabela').innerHTML = '<div class="aviso">Ainda não existem registos efetuados.</div>';
-                    return;
-                }
-
-                const datasUnicas = [...new Set(listaRegistos.map(r => r.data))].sort();
-
-                let htmlTabela = `<table><thead><tr><th>Músico</th>`;
-                datasUnicas.forEach(d => { htmlTabela += `<th>${d}</th>`; });
-                htmlTabela += `</tr></thead><tbody>`;
-
-                musicosLista.forEach(m => {
-                    htmlTabela += `<tr><td>${m}</td>`;
-                    datasUnicas.forEach(d => {
-                        const reg = listaRegistos.find(r => r.musico === m && r.data === d);
-                        if (reg) {
-                            const classe = reg.estado === 'Presente' ? 'presente' : 'faltou';
-                            htmlTabela += `<td class="${classe}">${reg.estado}</td>`;
-                        } else {
-                            htmlTabela += `<td>-</td>`;
-                        }
-                    });
-                    htmlTabela += `</tr>`;
-                });
-
-                htmlTabela += `</tbody></table>`;
-                document.getElementById('conteudoTabela').innerHTML = htmlTabela;
-
-            } catch (error) {
-                document.getElementById('conteudoTabela').innerHTML = `<div class="aviso" style="color: red;">Erro ao carregar dados: ${error.message}</div>`;
-            }
-        }
-
-        carregarTabela();
-    </script>
-</body>
-</html>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Músico</th><th>2026-09-19</th></tr></thead><tbody><tr><td>Ivan</td><td>-</td></tr><tr><td>Samuel</td><td>-</td></tr><tr><td>Adelaide</td><td>-</td></tr><tr><td>Rafael</td><td>-</td></tr><tr><td>Joana</td><td>-</td></tr><tr><td>Victor</td><td>-</td></tr><tr><td>Sofia M.</td><td>-</td></tr><tr><td>Alexandre</td><td>-</td></tr><tr><td>Pedro B.</td><td>-</td></tr><tr><td>Ricardo P.</td><td>-</td></tr><tr><td>Kika</td><td class="presente">Presente</td></tr><tr><td>Raul</td><td>-</td></tr><tr><td>Ricardo S.</td><td>-</td></tr><tr><td>Ana Sofia</td><td>-</td></tr><tr><td>Simone</td><td>-</td></tr><tr><td>Patrícia</td><td>-</td></tr><tr><td>André</td><td>-</td></tr><tr><td>Daniel</td><td>-</td></tr><tr><td>Francisco</td><td>-</td></tr></tbody></table></div></body></html>
