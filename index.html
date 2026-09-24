@@ -1,1 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlo de Assiduidade</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --success-color: #27ae60;
+            --bg-color: #f4f7f6;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 15px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        select, input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px; /* Evita zoom automático no iPhone */
+            background: #fff;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        button {
+            width: 100%;
+            background-color: var(--success-color);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #219653;
+        }
+        .config-box {
+            background: #eef2f3;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+        .config-box input {
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+        #loading {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h2>Controlo de Assiduidade</h2>
+
+    <!-- Configuração Inicial do GitHub (Preencher uma vez ou guardar no telemóvel) -->
+    <details class="config-box">
+        <summary>⚙️ Configuração do GitHub (clique para abrir)</summary>
+        <div class="form-group" style="margin-top: 10px;">
+            <label>Utilizador / Organização GitHub:</label>
+            <input type="text" id="ghUser" placeholder="ex: o-teu-utilizador">
+        </div>
+        <div class="form-group">
+            <label>Nome do Repositório:</label>
+            <input type="text" id="ghRepo" placeholder="ex: controle-assiduidade">
+        </div>
+        <div class="form-group">
+            <label>Token de Acesso Pessoal (GitHub Token):</label>
+            <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxx">
+        </div>
+        <button type="button" onclick="salvarConfig()" style="background: var(--accent-color); padding: 8px;">Guardar Configurações</button>
+    </details>
+
+    <form id="attendanceForm">
+        <div class="form-group">
+            <label for="musico">Músico:</label>
+            <select id="musico" required>
+                <option value="">Selecione o Músico</option>
+                <option>Ivan</option><option>Samuel</option><option>Adelaide</option>
+                <option>Rafael</option><option>Joana</option><option>Victor</option>
+                <option>Sofia M.</option><option>Alexandre</option><option>Pedro B.</option>
+                <option>Ricardo P.</option><option>Kika</option><option>Raul</option>
+                <option>Ricardo S.</option><option>Ana Sofia</option><option>Simone</option>
+                <option>Patrícia</option><option>André</option><option>Daniel</option>
+                <option>Francisco</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="instrumento">Instrumento:</label>
+            <select id="instrumento" required>
+                <option value="">Selecione o Instrumento</option>
+                <option>Bateria</option><option>Percussão</option><option>Piano</option>
+                <option>Teclados</option><option>Sax Alto</option><option>Sax Tenor</option>
+                <option>Sax Barítono</option><option>Trombone</option><option>Trompete</option>
+                <option>Voz</option><option>Guitarra</option><option>Baixo Elétrico</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+        </div>
+
+        <div class="form-group">
+            <label for="local">Local:</label>
+            <input type="text" id="local" placeholder="Ex: Sala de Ensaios / Auditório" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" required>
+                <option value="ensaio">Ensaio</option>
+                <option value="servico">Serviço</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="estado">Presença:</label>
+            <select id="estado" required>
+                <option value="Presente">Presente</option>
+                <option value="Faltou">Faltou</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="observacao">Observação:</label>
+            <textarea id="observacao" placeholder="Notas adicionais..."></textarea>
+        </div>
+
+        <button type="submit">Registar Assiduidade</button>
+        <div id="loading">A guardar dados no GitHub...</div>
+    </form>
+</div>
+
+<script>
+    // Preencher a data de hoje por defeito
+    document.getElementById('data').valueAsDate = new Date();
+
+    // Carregar configurações guardadas no navegador do telemóvel/PC
+    window.onload = function() {
+        if(localStorage.getItem('ghUser')) document.getElementById('ghUser').value = localStorage.getItem('ghUser');
+        if(localStorage.getItem('ghRepo')) document.getElementById('ghRepo').value = localStorage.getItem('ghRepo');
+        if(localStorage.getItem('ghToken')) document.getElementById('ghToken').value = localStorage.getItem('ghToken');
+    };
+
+    function salvarConfig() {
+        localStorage.setItem('ghUser', document.getElementById('ghUser').value);
+        localStorage.setItem('ghRepo', document.getElementById('ghRepo').value);
+        localStorage.setItem('ghToken', document.getElementById('ghToken').value);
+        alert('Configurações guardadas neste dispositivo!');
+    }
+
+    document.getElementById('attendanceForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const user = document.getElementById('ghUser').value;
+        const repo = document.getElementById('ghRepo').value;
+        const token = document.getElementById('ghToken').value;
+
+        if (!user || !repo || !token) {
+            alert('Por favor, preencha as configurações do GitHub primeiro (clique na engrenagem acima).');
+            return;
+        }
+
+        document.getElementById('loading').style.display = 'block';
+
+        const musico = document.getElementById('musico').value;
+        const instrumento = document.getElementById('instrumento').value;
+        const data = document.getElementById('data').value;
+        const local = document.getElementById('local').value;
+        const tipo = document.getElementById('tipo').value;
+        const estado = document.getElementById('estado').value;
+        const observacao = document.getElementById('observacao').value.replace(/,/g, ' '); // Limpar vírgulas para o CSV
+
+        const novaLinha = `\n"${musico}","${instrumento}","${data}","${local}","${tipo}","${estado}","${observacao}"`;
+        const path = 'dados.csv';
+        const url = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
+
+        try {
+            // 1. Obter o ficheiro atual para pegar no SHA (obrigatório pela API do GitHub)
+            const getRes = await fetch(url, {
+                headers: { 'Authorization': `token ${token}` }
+            });
+
+            if (!getRes.ok) throw new Error('Erro ao ler o ficheiro dados.csv do GitHub. Verifique as credenciais.');
+
+            const fileData = await getRes.json();
+            const sha = fileData.sha;
+            const conteudoAtual = decodeURIComponent(escape(atob(fileData.content)));
+            const novoConteudo = conteudoAtual + novaLinha;
+
+            // 2. Enviar a atualização para o GitHub
+            const putRes = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: `Registo de assiduidade: ${musico} (${data})`,
+                    content: btoa(unescape(encodeURIComponent(novoConteudo))),
+                    sha: sha
+                })
+            });
+
+            if (putRes.ok) {
+                alert('Registo guardado com sucesso no GitHub!');
+                document.getElementById('attendanceForm').reset();
+                document.getElementById('data').valueAsDate = new Date();
+            } else {
+                throw new Error('Erro ao atualizar o ficheiro no GitHub.');
+            }
+
+        } catch (error) {
+            alert('Erro: ' + error.message);
+        } finally {
+            document.getElementById('loading').style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
