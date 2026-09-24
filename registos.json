@@ -196,5 +196,14 @@
     "tipo": "Serviço",
     "estado": "Faltou",
     "observacao": ""
+  },
+  {
+    "musico": "Rafael",
+    "instrumento": "Piano",
+    "data": "2026-08-26",
+    "local": "Festa Montelavar ",
+    "tipo": "Serviço",
+    "estado": "Presente",
+    "observacao": "Pagamento 80€"
   }
 ]
