@@ -205,5 +205,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": "Pagamento 80€"
+  },
+  {
+    "musico": "Joana",
+    "instrumento": "Teclados",
+    "data": "2026-08-26",
+    "local": "Festa Montelavar ",
+    "tipo": "Serviço",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
