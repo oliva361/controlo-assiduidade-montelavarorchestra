@@ -124,5 +124,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Patrícia",
+    "instrumento": "Voz",
+    "data": "2026-09-19",
+    "local": "Auditório SFBUM aniversário ARPIM",
+    "tipo": "Serviço",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
