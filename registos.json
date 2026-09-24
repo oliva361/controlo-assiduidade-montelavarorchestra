@@ -7,5 +7,14 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Alexandre",
+    "instrumento": "Sax Tenor",
+    "data": "2026-10-06",
+    "local": "Montelavar",
+    "tipo": "Serviço",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
