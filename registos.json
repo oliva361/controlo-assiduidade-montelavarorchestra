@@ -25,5 +25,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Rafael",
+    "instrumento": "Piano",
+    "data": "2026-09-19",
+    "local": "Auditório SFBUM aniversário ARPIM",
+    "tipo": "Serviço",
+    "estado": "Presente",
+    "observacao": "Pagamento de 80€"
   }
 ]
