@@ -88,5 +88,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Raul",
+    "instrumento": "Trompete",
+    "data": "2026-09-19",
+    "local": "Auditório SFBUM aniversário ARPIM",
+    "tipo": "Serviço",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
