@@ -1,3 +1,11 @@
 [
-  
+  {
+    "musico": "Kika",
+    "instrumento": "Trombone",
+    "data": "2026-09-19",
+    "local": "Festa Montelavar",
+    "tipo": "Serviço",
+    "estado": "Presente",
+    "observacao": "Custo 0"
+  }
 ]
