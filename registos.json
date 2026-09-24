@@ -133,5 +133,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "André",
+    "instrumento": "Voz",
+    "data": "2026-09-19",
+    "local": "Auditório SFBUM aniversário ARPIM",
+    "tipo": "Serviço",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
