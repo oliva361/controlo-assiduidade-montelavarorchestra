@@ -7,5 +7,14 @@
     "tipo": "Serviço",
     "estado": "Faltou",
     "observacao": "Pediu algum tempo de ausência da Montelavar orchestra"
+  },
+  {
+    "musico": "Samuel",
+    "instrumento": "Bateria",
+    "data": "2026-09-19",
+    "local": "Auditório SFBUM aniversário ARPIM",
+    "tipo": "Serviço",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
