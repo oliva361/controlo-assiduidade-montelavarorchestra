@@ -331,5 +331,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Francisco",
+    "instrumento": "Guitarra",
+    "data": "2026-08-26",
+    "local": "Festa Montelavar ",
+    "tipo": "Serviço",
+    "estado": "Presente",
+    "observacao": "Pagamento de 80€"
   }
 ]
