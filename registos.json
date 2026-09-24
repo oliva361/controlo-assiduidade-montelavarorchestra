@@ -286,5 +286,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Ana Sofia",
+    "instrumento": "Trompete",
+    "data": "2026-08-26",
+    "local": "Festa Montelavar ",
+    "tipo": "Serviço",
+    "estado": "Faltou",
+    "observacao": "Reforço \nDiogo Santos pagamento de 80€"
   }
 ]
