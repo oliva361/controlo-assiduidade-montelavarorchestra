@@ -585,15 +585,6 @@
     "observacao": ""
   },
   {
-    "musico": "Sofia M.",
-    "instrumento": "Sax Alto",
-    "data": "2026-10-07",
-    "local": "Sala ensaio ",
-    "tipo": "Ensaio",
-    "estado": "Presente",
-    "observacao": ""
-  },
-  {
     "musico": "Alexandre",
     "instrumento": "Sax Tenor",
     "data": "2026-10-07",
@@ -677,6 +668,15 @@
   {
     "musico": "Francisco",
     "instrumento": "Guitarra",
+    "data": "2026-10-07",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
+  },
+  {
+    "musico": "Sofia M.",
+    "instrumento": "Sax Alto",
     "data": "2026-10-07",
     "local": "Sala ensaio ",
     "tipo": "Ensaio",
