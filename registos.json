@@ -376,5 +376,14 @@
     "tipo": "Ensaio",
     "estado": "Faltou",
     "observacao": ""
+  },
+  {
+    "musico": "Joana",
+    "instrumento": "Teclados",
+    "data": "2026-10-06",
+    "local": "Sala ensaios ",
+    "tipo": "Ensaio",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
