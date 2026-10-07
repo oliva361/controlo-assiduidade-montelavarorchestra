@@ -340,5 +340,14 @@
     "tipo": "Serviço",
     "estado": "Presente",
     "observacao": "Pagamento de 80€"
+  },
+  {
+    "musico": "Ivan",
+    "instrumento": "Bateria",
+    "data": "2026-10-06",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
