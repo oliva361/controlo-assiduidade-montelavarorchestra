@@ -585,15 +585,6 @@
     "observacao": ""
   },
   {
-    "musico": "Ricardo P.",
-    "instrumento": "Trombone",
-    "data": "2026-10-07",
-    "local": "Sala ensaio ",
-    "tipo": "Ensaio",
-    "estado": "Faltou",
-    "observacao": ""
-  },
-  {
     "musico": "Kika",
     "instrumento": "Trombone",
     "data": "2026-10-07",
@@ -677,6 +668,15 @@
   {
     "musico": "Alexandre",
     "instrumento": "Sax Tenor",
+    "data": "2026-10-07",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Faltou",
+    "observacao": ""
+  },
+  {
+    "musico": "Ricardo P.",
+    "instrumento": "Trombone",
     "data": "2026-10-07",
     "local": "Sala ensaio ",
     "tipo": "Ensaio",
