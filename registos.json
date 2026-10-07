@@ -520,5 +520,14 @@
     "tipo": "Ensaio",
     "estado": "Faltou",
     "observacao": ""
+  },
+  {
+    "musico": "Raul",
+    "instrumento": "Trompete",
+    "data": "2026-10-07",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
