@@ -709,5 +709,14 @@
     "tipo": "Ensaio",
     "estado": "Faltou",
     "observacao": ""
+  },
+  {
+    "musico": "Rafael",
+    "instrumento": "Piano",
+    "data": "2026-10-14",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
