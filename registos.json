@@ -745,5 +745,14 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Alexandre",
+    "instrumento": "Sax Tenor",
+    "data": "2026-10-14",
+    "local": "Sala ensaio",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
