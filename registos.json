@@ -808,5 +808,14 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Simone",
+    "instrumento": "Voz",
+    "data": "2026-10-14",
+    "local": "Sala ensaio",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": "Inflamação na boca"
   }
 ]
