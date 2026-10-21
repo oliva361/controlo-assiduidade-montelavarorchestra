@@ -871,5 +871,14 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Adelaide",
+    "instrumento": "Percussão",
+    "data": "2026-10-21",
+    "local": "Sala ensaio",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
