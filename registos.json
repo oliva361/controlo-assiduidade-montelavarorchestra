@@ -970,5 +970,14 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "Ana Sofia",
+    "instrumento": "Trompete",
+    "data": "2026-10-21",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
