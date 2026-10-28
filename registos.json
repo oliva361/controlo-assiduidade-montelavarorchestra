@@ -1159,5 +1159,14 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
+  },
+  {
+    "musico": "André",
+    "instrumento": "Voz",
+    "data": "2026-10-28",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
