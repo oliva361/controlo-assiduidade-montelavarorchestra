@@ -1204,5 +1204,14 @@
     "tipo": "Ensaio",
     "estado": "Faltou",
     "observacao": ""
+  },
+  {
+    "musico": "Samuel",
+    "instrumento": "Bateria",
+    "data": "2026-11-04",
+    "local": "Sala ensaio",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
   }
 ]
