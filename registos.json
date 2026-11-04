@@ -1287,15 +1287,6 @@
     "observacao": ""
   },
   {
-    "musico": "Kika",
-    "instrumento": "Trombone",
-    "data": "2026-11-04",
-    "local": "Sala ensaio",
-    "tipo": "Ensaio",
-    "estado": "Faltou",
-    "observacao": ""
-  },
-  {
     "musico": "Raul",
     "instrumento": "Trompete",
     "data": "2026-11-04",
@@ -1361,6 +1352,15 @@
   {
     "musico": "Francisco",
     "instrumento": "Guitarra",
+    "data": "2026-11-04",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": ""
+  },
+  {
+    "musico": "Kika",
+    "instrumento": "Trombone",
     "data": "2026-11-04",
     "local": "Sala ensaio ",
     "tipo": "Ensaio",
