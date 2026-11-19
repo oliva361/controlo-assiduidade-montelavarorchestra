@@ -1447,5 +1447,14 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": "Encontra-se a recuperar de lesão "
+  },
+  {
+    "musico": "Ricardo P.",
+    "instrumento": "Trombone",
+    "data": "2026-11-18",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
