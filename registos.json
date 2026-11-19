@@ -1438,5 +1438,14 @@
     "tipo": "Ensaio",
     "estado": "Faltou",
     "observacao": ""
+  },
+  {
+    "musico": "Pedro B.",
+    "instrumento": "Sax Barítono",
+    "data": "2026-11-18",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Presente",
+    "observacao": "Encontra-se a recuperar de lesão "
   }
 ]
