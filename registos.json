@@ -1294,7 +1294,7 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
-  }
+  },
   {
     "musico": "Raul",
     "instrumento": "Trompete",
@@ -1366,5 +1366,5 @@
     "tipo": "Ensaio",
     "estado": "Presente",
     "observacao": ""
-  },
+  }
 ]
