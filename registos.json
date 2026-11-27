@@ -1690,5 +1690,14 @@
     "tipo": "Ensaio",
     "estado": "Faltou",
     "observacao": ""
+  },
+  {
+    "musico": "Daniel",
+    "instrumento": "Baixo Elétrico",
+    "data": "2026-11-27",
+    "local": "Sala ensaio ",
+    "tipo": "Ensaio",
+    "estado": "Faltou",
+    "observacao": ""
   }
 ]
